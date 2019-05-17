@@ -190,8 +190,10 @@ def configure_cryptography():
     import cryptography
     import warnings
     from cryptography import utils
-    if hasattr(cryptography.utils, 'DeprecatedIn23'):
-        warnings.simplefilter('ignore', cryptography.utils.DeprecatedIn23)
+    with warnings.catch_warnings():
+        if hasattr(cryptography.utils, 'DeprecatedIn23'):
+            warnings.simplefilter('ignore', cryptography.utils.DeprecatedIn23)
+            import cryptography.hazmat.primitives.constant_time
 # Filter cryptography >= 2.3 warnings
 if sys.version_info < (2, 7, 7):
     configure_cryptography()

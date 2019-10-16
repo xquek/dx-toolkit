@@ -97,10 +97,10 @@ endif
 
 # Docker2aci download URL
 ifeq ($(PLATFORM), osx)
-	DOCKER_ACI_URL=https://dl.dnanex.us/F/D/40XJf2gqYqYqzYbGzyqB4g9PxGX9ZY9Bqvgv0Pz5/docker2aci-osx
+	DOCKER_ACI_URL=https://dl.dnanex.us/F/D/v68z5jbjFf8FVFYfYZXq4v2xp2P910KG1f4B3z5x/docker2aci-osx-v0.17.2
 else ifeq ($(PLATFORM), windows)
 # dx-docker not currently supported on Windows."
 	DOCKER_ACI_URL=
 else
-	DOCKER_ACI_URL=https://dl.dnanex.us/F/D/B9ZFXqk6q9g0Z3FygYq61y82vpKQ2gj191vkP9jz/docker2aci
+	DOCKER_ACI_URL=https://dl.dnanex.us/F/D/yFJ7z0515q475BxjQVg6bJPvkF4vk6KV44q2Fk98/docker2aci-v0.17.2
 endif
